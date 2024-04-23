@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "authors": [
+    ""
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inputmask": "^5.0.3",
+    "mustache": "^4.0.0",
+    "jquery-ui": "^1.12.1"
+  }
+}
