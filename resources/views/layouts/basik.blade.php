@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="{{ asset('/template/assets/css/theme.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ asset('/template/assets/css/style.css') }}" type="text/css" />
 	
-
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<style>
 		.bg-sidebarmenu {
 			background: white;

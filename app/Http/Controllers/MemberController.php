@@ -12,6 +12,26 @@ class MemberController extends Controller {
     {
         $view['page_title'] = "Dashboard";
 
+        $males = \App\Models\Member::where('gender','male')->get()->count();
+        $females = \App\Models\Member::where('gender','female')->get()->count();
+
+        $married = \App\Models\Member::where('marital_status','married')->get()->count();
+        $single = \App\Models\Member::where('marital_status','single')->get()->count();
+
+        $active = \App\Models\Member::where('status',1)->get()->count();
+        $inactive = \App\Models\Member::where('status',0)->get()->count();
+
+        $data = [
+            'labels_gender' => ['Laki-laki', 'Perempuan'],
+            'data_gender' => [$males, $females],
+            'labels_marital_status' => ['Menikah','Belum Menikah'],
+            'data_marital_status' => [$married, $single],
+            'labels_active' => ['Aktif', 'Tidak Aktif'],
+            'data_active' => [$active, $inactive],
+        ];
+
+        $view['data'] = $data;
+
         return view('web.dashboard', $view);
     }
 
